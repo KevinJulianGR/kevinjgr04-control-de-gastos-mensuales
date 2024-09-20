@@ -112,3 +112,7 @@ ul li:last-child {
     color: #fff;
 
 }
+
+.error {
+    border: 2px solid red;
+}
