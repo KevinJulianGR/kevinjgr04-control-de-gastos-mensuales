@@ -59,16 +59,28 @@ function clickBoton() {
 function actualizarListaGastos(){
     const listaElementos = document.getElementById("listaDeGastos");
     const totalElementos = document.getElementById("totalGastos");
-    let htmlLista = "";
-    let totalGastos = 0;    
-    listaNombresGastos.forEach((elemento, posicion) =>{
+    let htmlTabla = "<table class='gastos-tabla'>"+
+    "<tr><th>Nombre</th><th>Precio</th><th>Descripción</th><th>Acciones</th></tr>";
+    let totalGastos = 0;
+
+    listaNombresGastos.forEach((elemento, posicion) => {
         const valorGasto = Number(listaValoresGastos[posicion]);
-        htmlLista += "<li>"+elemento+" - USD "+valorGasto.toFixed(2)+" "+listaDescripcionGastos[posicion]+
-        "<button onclick='eliminarGasto("+posicion+")'>Eliminar</button>"+
-        "<button onclick='modificarGasto("+posicion+")'>Modificar</button>"+"</li>";
+        htmlTabla += `
+            <tr>
+                <td>${elemento}</td>
+                <td>USD ${valorGasto.toFixed(2)}</td>
+                <td>${listaDescripcionGastos[posicion]}</td>
+                <td>
+                    <button id='boton-eliminar' onclick='eliminarGasto(${posicion})'>Eliminar</button>
+                    <button id='boton-modificar' onclick='modificarGasto(${posicion})'>Modificar</button>
+                </td>
+            </tr>
+        `;
         totalGastos += Number(valorGasto);
-    })
-    listaElementos.innerHTML = htmlLista;
+    });
+
+    htmlTabla += "</table>";
+    listaElementos.innerHTML = htmlTabla;
     totalElementos.innerHTML = totalGastos.toFixed(2);
     limpiar();
 }

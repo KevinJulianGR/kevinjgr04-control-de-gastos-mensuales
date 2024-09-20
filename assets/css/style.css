@@ -1,10 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-
-    background: url('../img/codigo.svg'), linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-
-
-    background-size: auto;
+    background: url('../img/fondo.jpg'), linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    background-size: cover;
     background-repeat: no-repeat;
     /* Hace que la imagen cubra todo el área del elemento */
     background-position: right;
@@ -20,20 +17,41 @@ input[type="number"] {
     width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
 }
 
 button {
     padding: 10px 40px;
     width: fit-content;
-    background-color: #1875E8;
+    background-color: blue;
     color: #fff;
     font-size: 1.2rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
 }
+
+#boton-eliminar,
+#boton-modificar {
+    font-size: 12px;
+    width: 130px;
+    font-weight: bold;
+    transition: background-color 0.s;
+}
+
+#boton-eliminar {
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+#boton-eliminar:hover {
+    background-color: #4cae4c;
+}
+
 
 button:hover {
     background-color: #4cae4c;
@@ -50,14 +68,16 @@ ul {
 
 ul li {
     padding: 10px;
-    background-color: #041832;
+    background-color: rgba(0, 0, 255, 0.555);
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 ul li:last-child {
     border-bottom: none;
+
 }
 
 .main-container {
@@ -65,17 +85,18 @@ ul li:last-child {
     justify-content: center;
     top: 110px;
     left: 120px;
-    width: 1200px;
+    width: 1000px;
     min-height: 80vh;
     margin: 0px auto;
     padding: 20px;
-    background: linear-gradient(0deg, rgba(20, 68, 128, 0.3), rgba(20, 68, 128, 0.3)),
-        linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+    background: linear-gradient(0deg, rgba(3, 29, 61, 0.500), rgba(3, 29, 61, 0.500)),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
 
     border-radius: 24px;
     color: white;
     box-shadow: 4px 4px 20px 0px #01080E26;
-    border: 1px solid #1875E8
+    border: 1px solid #1875E8;
+    box-shadow: 0 24px 18px rgb(0, 0, 0);
 }
 
 .container {
@@ -106,13 +127,40 @@ ul li:last-child {
 }
 
 .total {
+    background-color: blue;
+    
+    border-radius: 10px;
+    padding: 2%;
     margin-top: 20px;
     font-size: 24px;
     text-align: center;
     color: #fff;
-
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
 }
 
-.error {
-    border: 2px solid red;
+.gastos-tabla {
+    border-spacing: 0;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    border: 2px solid black;
+    text-align: center;
+    background-color: #f0f8ff;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+.gastos-tabla th,
+.gastos-tabla td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
+.gastos-tabla th {
+    background-color: blue;
+}
+
+.gastos-tabla td {
+    background-color: rgba(0, 0, 255, 0.432);
 }
