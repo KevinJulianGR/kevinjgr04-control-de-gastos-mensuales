@@ -20,16 +20,19 @@ function clickBoton() {
     if (nombreGasto.value === "") {
         nombreGasto.style.border = "2px solid red";
         camposValidos = false;
+        alert("Debe llenar todos los campos")
     }
     
     if (valorGasto.value === "") {
         valorGasto.style.border = "2px solid red";
         camposValidos = false;
+        alert("Debe llenar todos los campos")
     }
     
     if (descripcionGasto.value === "") {
         descripcionGasto.style.border = "2px solid red";
         camposValidos = false;
+        alert("Debe llenar todos los campos")
     }
     
     if (camposValidos) {
