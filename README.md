@@ -1,7 +1,7 @@
 ## Control de Gastos Mensuales
 
 # Descripción
-ñ
+
 Este proyecto es una aplicación web para el seguimiento de gastos mensuales. Permite a los usuarios agregar, editar y eliminar gastos, proporcionando un total acumulado de todos los gastos ingresados.
 
 # Características
